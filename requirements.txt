@@ -1,7 +1,5 @@
 streamlit 
 pandas
 numpy
-math
 requests
 certifi
-pandas
