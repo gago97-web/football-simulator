@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 from pathlib import Path
-folder = Path('C:/Users/ggrassi004/Downloads/seriea_simulator/Risultati')
+folder = Path(__file__).parent / 'Risultati'
 csv_files = sorted(folder.glob('*.csv'))
 
 dfs = []

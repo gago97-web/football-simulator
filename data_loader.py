@@ -160,7 +160,8 @@ CLASSIFICA_FALLBACK = [
 from collections import defaultdict
 
 # Carica il CSV
-calendario = pd.read_csv("C:/Users/ggrassi004/Downloads/seriea_simulator/calendario.csv", sep=";")
+BASE_DIR = Path(__file__).parent  # cartella di data_loader.py
+csv_path = BASE_DIR / "calendario.csv"
 calendario=calendario.loc[166:]
 
 # Dizionario: squadra -> lista di match ordinati
