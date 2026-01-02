@@ -156,13 +156,16 @@ CLASSIFICA_FALLBACK = [
 ]
 
 
-
+from pathlib import Path
 from collections import defaultdict
 
-# Carica il CSV
-BASE_DIR = Path(__file__).parent  # cartella di data_loader.py
+# Percorso relativo del CSV rispetto a data_loader.py
+BASE_DIR = Path(__file__).parent
 csv_path = BASE_DIR / "calendario.csv"
-calendario=calendario.loc[166:]
+
+# Carica il CSV
+calendario = pd.read_csv(csv_path, sep=";")
+calendario = calendario.loc[166:]
 
 # Dizionario: squadra -> lista di match ordinati
 # Ogni match è un dict: {"vs": avversario, "home": True/False}
